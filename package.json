@@ -2,12 +2,11 @@
   "name": "multiplexer",
   "version": "1.0.0",
   "description": "Wrapper for Plex Transcoder",
-  "main": "index.js",
-  "bin": "index.js",
+  "bin": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "pkg package.json --out-path=./bin",
-    "tsc": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,7 +20,9 @@
   "homepage": "https://github.com/sonng/multiplexer#readme",
   "dependencies": {
     "pkg": "^4.3.4",
-    "tsc": "^1.20150623.0",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
     "typescript": "^3.1.1"
   }
 }
