@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "pkg package.json --out-path=./bin"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sonng/multiplexer/issues"
   },
-  "homepage": "https://github.com/sonng/multiplexer#readme"
+  "homepage": "https://github.com/sonng/multiplexer#readme",
+  "dependencies": {
+    "pkg": "^4.3.4"
+  }
 }

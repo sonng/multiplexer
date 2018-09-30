@@ -60,7 +60,5 @@ typings/
 # next.js build output
 .next
 
-# Multiplex
-multiplexer-linux
-multiplexer-macos
-multiplexer-win.exe
+# Don't include bin
+bin/
