@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "pkg package.json --out-path=./bin",
-    "build": "tsc"
+    "build": "tsc",
+    "compile": "npm run build && npm run package"
   },
   "repository": {
     "type": "git",
