@@ -1,12 +1,17 @@
 import * as process from "process"
-import * as fs from "fs"
-import * as console from "console"
 
-const output = fs.createWriteStream('~/logs/plex/stdout.log');
-const errorOutput = fs.createWriteStream('~/logs/plex/stderr.log');
-// custom simple logger
-const logger = new console.Console(output, errorOutput)
+import { Config } from "./config"
+import { Master } from "./master"
 
-process.argv.forEach((val: string, index: number) => {
-  logger.log(`${index}: ${val}`);
-});
+const config = new Config("~/.multiplexer.config", process.argv)
+
+if (config.isConfigurationRun()) {
+  // Print information about the nodes
+  console.log("Information about the nodes")
+} else {
+  console.log("Running the nodes")
+
+  const master = new Master(config)
+
+  master.run()
+}
